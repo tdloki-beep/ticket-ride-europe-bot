@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  ticket-to-ride-bot:
+    build: .
+    container_name: ticket-to-ride-europe-bot
+    restart: unless-stopped
+    environment:
+      - BOT_TOKEN=${BOT_TOKEN}
+    volumes:
+      - ./logs:/app/logs

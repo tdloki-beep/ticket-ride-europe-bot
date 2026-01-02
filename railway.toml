@@ -1,0 +1,9 @@
+[build]
+builder = "DOCKER"
+dockerfilePath = "./Dockerfile"
+
+[deploy]
+startCommand = "python run_bot.py"
+healthCheckPath = "/health"
+healthCheckTimeout = 300
+restartPolicyType = "ON_FAILURE"
